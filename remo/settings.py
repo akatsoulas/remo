@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'product_details',
     'raven.contrib.django.raven_compat',
     'mozilla_django_oidc',
+    'axes',
     # Project specific apps
     'remo.base',
     'remo.profiles',
@@ -382,6 +383,9 @@ LOGGING = {
 }
 
 HEALTHCHECKS_IO_URL = config('HEALTHCHECKS_IO_URL', default='')
+
+# Django-axes configuration
+AXES_BEHIND_REVERSE_PROXY = config('AXES_BEHIND_REVERSE_PROXY', default=True, cast=bool)
 
 # Django Rest Framework
 REST_FRAMEWORK = {
